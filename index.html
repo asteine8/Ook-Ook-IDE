@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Ook Ook IDE</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="linter.js"></script>
+        <script src="interpreter.js"></script>
+    </head>
+
+    <body onload="SelectNextError();">
+
+        <h1>Ook Ook IDE</h1>
+        <p>This IDE runs <a href="https://esolangs.org/wiki/ook!">Ook!</a>, an esoteric programming language. Input and output are interpreted as ASCII characters (string.charCodeAt(0)). Characters not in the Ook! command set will be interpreted as comments. This interpreter adds an extension to Ook! using the <a href="https://esolangs.org/wiki/Random_Brainfuck">Random Brainfuck</a> specifications where Ook? Ook? will write a random 1 or 0 to the current cell.<br>
+        Also note that if text is in the console input buffer, the left-most character will be consumed in the case of an input command. If more text needs to be added, type the text then press the enter key to set the buffer.
+        </p>
+        <p>Phillia Steiner - November 2018</p>
+        <div class="buttonPanel">
+            <!-- Main Button Panel -->
+            <button id="RunButton" onclick="InitializeProgram();">Run</button>
+            <button id="StopButton" onclick="ResetProgram();">Stop</button>
+
+            <button id="PrevError" onclick="SelectPrevError();">Prev Error</button>
+            <button id="NextError" onclick="SelectNextError();">Next Error</button>
+            <p id="ErrorOutput"></p>
+        </div>
+
+        <div class="buttonPanel">
+            <!-- Linting Button Panel -->
+        </div>
+
+        <textarea id="WordPad" spellcheck="false">Ook? Ook!</textarea>
+        <br>
+
+        <p>Console</p>
+        <textarea id="Console" spellcheck="false" readonly="true">>>Weh</textarea>
+        <br>
+        <input type="text" id="ConsoleInput" spellcheck="false" onkeydown="InputKeyPressed(event);"/>
+    </body>
+</html>

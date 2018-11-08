@@ -1,0 +1,39 @@
+
+
+.buttonPanel {
+    padding: 10px;
+    margin-left: none;
+}
+.buttonPanel button {
+    font-family: 'Consolas', monospace;
+    font-size: 12pt;
+    color: white;
+
+    padding: 10px 15px;
+    margin: 2px;
+    border: none;
+    display: inline-block;
+    background: #4CAF50;
+    transition-duration: .25s;
+}
+.buttonPanel button:hover {
+    background: #1C8F40;
+    transition-duration: .25s;
+}
+.buttonPanel button:active {
+    background: darkgreen;
+    transition-duration: 0s;
+}
+textarea {
+    font-family: 'Consolas', monospace;
+    font-size: 10;
+    min-width: 75%;
+    min-height: 250px;
+}
+#Console {
+    background: rgb(50,50,50);
+    color: cyan;
+}
+#ConsoleInput {
+    width: 50%;
+}
